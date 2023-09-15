@@ -8,6 +8,11 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script !src="">
+        function onSubmit(token) {
+            document.getElementById("demo-form").submit();
+        }
+    </script>
 </head>
 <body>
     <form>
@@ -49,9 +54,7 @@
         const firebase = initializeApp(firebaseConfig);
         const analytics = getAnalytics(firebase);
 
-        function onSubmit(token) {
-            document.getElementById("demo-form").submit();
-        }
+
     </script>
 </body>
 </html>
