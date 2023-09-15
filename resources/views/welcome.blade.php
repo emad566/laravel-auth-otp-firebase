@@ -14,11 +14,10 @@
         <label for="phone">Phone Number</label>
         <input name="phone" id="phone" type="text">
         <div id="recaptcha-container"></div>
-        <button type="submit" onclick="">Send</button>
         <button class="g-recaptcha"
-                data-sitekey="reCAPTCHA_site_key"
+                data-sitekey="6LcNeicoAAAAAJoygda3Th-TcJUFUbqVM-6xNrcB"
                 data-callback='onSubmit'
-                data-action='submit'>Submit</button>
+                data-action='submit' type="submit" onclick="">Send</button>
         <div id="error" style="color:red; display: none"></div>
         <div id="sentMessage" style="color:green; display: none"></div>
     </form>
