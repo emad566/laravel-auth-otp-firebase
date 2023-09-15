@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
     <form>
@@ -14,6 +15,10 @@
         <input name="phone" id="phone" type="text">
         <div id="recaptcha-container"></div>
         <button type="submit" onclick="">Send</button>
+        <button class="g-recaptcha"
+                data-sitekey="reCAPTCHA_site_key"
+                data-callback='onSubmit'
+                data-action='submit'>Submit</button>
         <div id="error" style="color:red; display: none"></div>
         <div id="sentMessage" style="color:green; display: none"></div>
     </form>
@@ -45,12 +50,8 @@
         const firebase = initializeApp(firebaseConfig);
         const analytics = getAnalytics(firebase);
 
-        window.onload = function (){
-            render();
-        }
-
-        function  render(){
-
+        function onSubmit(token) {
+            document.getElementById("demo-form").submit();
         }
     </script>
 </body>
