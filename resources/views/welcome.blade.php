@@ -19,7 +19,7 @@
     </form>
 
     <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
-    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-recaptcha.js"></script>
+{{--    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-recaptcha.js"></script>--}}
     <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js'
 
@@ -42,16 +42,15 @@
         };
 
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+        const firebase = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(firebase);
 
         window.onload = function (){
             render();
         }
 
         function  render(){
-            window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-            recaptchaVerifier.render();
+
         }
     </script>
 </body>
